@@ -22,6 +22,7 @@ const toastDetails = {
 
 const removeToast = (toast) => {
   toast.classList.add("hidden");
+  if (toast.timeoutId) clearTimeout(toast.timeoutId);
   setTimeout(() => toast.remove(), 1000);
 };
 
@@ -35,7 +36,7 @@ const createToast = (id) => {
                      </section>
                      <i class="fa-solid fa-xmark" onClick="removeToast(this.parentElement)"></i>`;
   notifications.appendChild(toast);
-  setTimeout(() => removeToast(toast), 5000);
+  toast.timeoutId = setTimeout(() => removeToast(toast), 5000);
 };
 
 buttons.forEach((btn) => {
