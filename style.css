@@ -135,6 +135,11 @@ body {
   color: var(--dark);
 }
 
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .buttons .btn {
   border: none;
   outline: none;
@@ -148,4 +153,16 @@ body {
 
 .buttons .btn:hover {
   opacity: 0.9;
+}
+
+@media (max-width: 445px) {
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons .btn {
+    margin: 0.5rem;
+  }
+  .notif .toast {
+    left: 1rem;
+  }
 }
