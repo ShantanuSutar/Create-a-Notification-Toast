@@ -22,10 +22,11 @@ const toastDetails = {
 
 const createToast = (id) => {
   const toast = document.createElement("section");
+  const { icon, text } = toastDetails[id];
   toast.className = `toast ${id}`;
   toast.innerHTML = `<section class="column">
-                     <i class="fa-solid fa-circle-check"></i>
-                     <span>Success: This is a success toast</span>
+                     <i class="${icon}"></i>
+                     <span>${text}</span>
                      </section>
                      <i class="fa-solid fa-xmark"></i>`;
   notifications.appendChild(toast);
