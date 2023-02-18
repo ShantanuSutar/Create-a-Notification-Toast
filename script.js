@@ -1,5 +1,25 @@
 const buttons = document.querySelectorAll(".buttons .btn");
 const notifications = document.querySelector(".notif");
+
+const toastDetails = {
+  success: {
+    icon: "fa-solid fa-circle-check",
+    text: "Success: This is a success toast",
+  },
+  error: {
+    icon: "fa-solid fa-circle-xmark",
+    text: "Error: This is a error toast",
+  },
+  warning: {
+    icon: "fa-solid fa-triangle-exclamation",
+    text: "Warning: This is a warning toast",
+  },
+  info: {
+    icon: "fa-solid fa-circle-info",
+    text: "Info: This is a info toast",
+  },
+};
+
 const createToast = (id) => {
   const toast = document.createElement("section");
   toast.className = `toast ${id}`;
