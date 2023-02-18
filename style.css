@@ -44,7 +44,7 @@ body {
   margin-bottom: 10px;
   background-color: var(--light);
   justify-content: space-between;
-  /* animation: show_toast 0.5s ease forwards; */
+  animation: show_toast 0.5s ease forwards;
 }
 @keyframes show_toast {
   0% {
@@ -67,7 +67,7 @@ body {
   width: 100%;
   bottom: 0;
   left: 0;
-  /* animation: progress 5s linear forwards; */
+  animation: progress 5s linear forwards;
 }
 @keyframes progress {
   100% {
