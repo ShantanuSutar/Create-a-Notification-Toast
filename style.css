@@ -44,6 +44,21 @@ body {
   margin-bottom: 10px;
   background-color: var(--light);
   justify-content: space-between;
+  animation: show_toast 0.5s ease forwards;
+}
+@keyframes show_toast {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(-5%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
 }
 .toast::before {
   position: absolute;
