@@ -4,3 +4,42 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+:root {
+  --dark: #f1faee;
+  --light: #fff;
+  --success: #0abf30;
+  --error: #e24d4c;
+  --warning: #e9bd0c;
+  --info: #3498db;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--dark);
+}
+
+.notif {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+}
+
+.notif section:nth-child(2n) {
+  display: flex;
+  align-items: center;
+}
+.notif :where(.toast, .column) {
+  display: flex;
+}
+.notif .toast {
+  width: 400px;
+  border-radius: 4px;
+  padding: 16px 17px;
+  margin-bottom: 10px;
+  background-color: var(--light);
+  justify-content: space-between;
+}
