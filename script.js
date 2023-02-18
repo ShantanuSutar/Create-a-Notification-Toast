@@ -2,6 +2,7 @@ const buttons = document.querySelectorAll(".buttons .btn");
 const notifications = document.querySelector(".notif");
 
 const toastDetails = {
+  timer: 5000,
   success: {
     icon: "fa-solid fa-circle-check",
     text: "Success: This is a success toast",
@@ -20,6 +21,11 @@ const toastDetails = {
   },
 };
 
+const removeToast = (toast) => {
+  toast.classList.add("hidden");
+  setTimeout(() => toast.remove(), 1000);
+};
+
 const createToast = (id) => {
   const toast = document.createElement("section");
   const { icon, text } = toastDetails[id];
@@ -30,6 +36,7 @@ const createToast = (id) => {
                      </section>
                      <i class="fa-solid fa-xmark"></i>`;
   notifications.appendChild(toast);
+  setTimeout(() => removeToast(toast), 5000);
 };
 
 buttons.forEach((btn) => {
